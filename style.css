@@ -1,0 +1,214 @@
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5; /* Уменьшенный межстрочный интервал */
+  background-color: #e8f0fe;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 10px auto; /* Уменьшенные внешние отступы */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+  width: 300px; /* Уменьшенная ширина боковой панели */
+  background-color: #0056b3;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Уменьшенные внутренние отступы */
+}
+.icon {
+  width: 20px; /* Установите желаемую ширину иконки */
+  height: 20px; /* Установите желаемую высоту иконки */
+  margin-right: 8px; /* Отступ справа от иконки */
+  vertical-align: middle; /* Выравнивание иконки по середине строки */
+}
+
+.contact-info {
+  text-align: left;
+  border-bottom: 2px solid white;
+  padding-bottom: 12px; /* Уменьшенные внутренние отступы */
+}
+
+.contact-info p, .contact-info a {
+  color: black;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.photo-frame {
+  width: 250px; /* Уменьшенный размер рамки */
+  height: 250px; /* Уменьшенный размер рамки */
+  margin-bottom: 20px; /* Уменьшенные внешние отступы */
+  /* Остальные стили остаются без изменений */
+}
+
+.profile-photo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+main {
+  flex-grow: 1;
+  padding: 25px; /* Уменьшенные внутренние отступы */
+  background-color: #fff;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 15px; /* Уменьшенные внешние отступы под заголовком */
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0056b3;
+  font-size: 1.4em; /* Уменьшенный размер шрифта для ФИО */
+}
+
+header p {
+  color: #333;
+  font-size: 0.90em; /* Уменьшенный размер шрифта для подзаголовка */
+}
+
+.experience, .education, .skills {
+  margin: 10px 0; /* Уменьшенные внешние отступы */
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0056b3;
+  font-size: 1em; /* Уменьшенный размер шрифта для заголовков секций */
+  margin-bottom: 5px; /* Уменьшенные внешние отступы */
+}
+
+h3 {
+  font-weight: 700;
+  color: #333;
+  font-size: 0.9em; /* Уменьшенный размер шрифта для подзаголовков */
+}
+
+ul {
+  list-style: inside square;
+  margin-left: 15px; /* Уменьшенные внутренние отступы */
+}
+
+li {
+  margin-bottom: 3px; /* Уменьшенные внешние отступы */
+  font-size: 0.85em; /* Уменьшенный размер шрифта для списка */
+}
+
+.job p, .education p, .skills p {
+  font-size: 0.85em; /* Уменьшенный размер шрифта для параграфов */
+  margin-bottom: 5px; /* Уменьшенные внешние отступы */
+}
+
+.job {
+  margin-bottom: 10px; /* Уменьшенные внешние отступы */
+}
+/* Медиа-запросы для планшетов */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Столбцы вместо рядов */
+    margin: 5px auto;
+  }
+
+  aside {
+    width: 100%; /* Боковая панель на всю ширину */
+    padding: 10px;
+  }
+
+  .photo-frame {
+    width: 200px; /* Немного уменьшаем размер фото */
+    height: 200px;
+    margin: 0 auto 10px; /* Центрируем фото и уменьшаем отступ снизу */
+  }
+
+  main {
+    padding: 15px; /* Меньше отступы */
+  }
+
+  header h1 {
+    font-size: 1.2em; /* Меньше размер шрифта */
+  }
+
+  header p {
+    font-size: 0.8em;
+  }
+}
+
+/* Медиа-запросы для мобильных телефонов */
+@media (max-width: 480px) {
+  .container {
+    margin: 2px auto;
+  }
+
+  aside {
+    padding: 5px;
+  }
+
+  .photo-frame {
+    width: 150px; /* Ещё меньше размер фото */
+    height: 150px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1em; /* Ещё меньше размер шрифта */
+  }
+
+  header p, .contact-info p, .contact-info a, .job p, .education p, .skills p {
+    font-size: 0.75em; /* Меньше размер шрифта */
+  }
+
+  h2, h3 {
+    font-size: 0.85em;
+  }
+
+  .icon {
+    width: 15px; /* Уменьшаем иконки */
+    height: 15px;
+  }
+}
+
+/* Медиа-запросы для больших мониторов */
+@media (min-width: 1201px) {
+  .container {
+    max-width: 1400px; /* Больше максимальная ширина */
+  }
+
+  aside {
+    padding: 25px; /* Больше внутренние отступы */
+  }
+
+  main {
+    padding: 30px;
+  }
+
+  header h1 {
+    font-size: 1.6em; /* Больше размер шрифта */
+  }
+
+  header p, .contact-info p, .contact-info a, .job p, .education p, .skills p {
+    font-size: 1em; /* Больше размер шрифта */
+  }
+
+  h2, h3 {
+    font-size: 1.1em;
+  }
+}
